@@ -1,0 +1,48 @@
+<app-teachernav></app-teachernav>
+
+<div class="container mt-5">
+  <form #f="ngForm" (ngSubmit)="updateQuestion(f)">
+    <div class="form-group">
+      <label for="questionText">Question Text</label>
+      <input type="text" name="questionText"  class="form-control" autocomplete="off" id="questionText" [(ngModel)]="question.questionText" required
+        #questionText="ngModel">
+    </div>
+
+    <div class="form-group">
+      <label for="optionA">Option1</label>
+      <input type="text" class="form-control" name="optionA" autocomplete="off" id="optionA" [(ngModel)]="question.options[0].optionText" required #optionA="ngModel">
+    </div>
+
+    <div class="form-group">
+      <label for="optionB">Option2</label>
+      <input type="text" class="form-control" name="optionB"  autocomplete="off" id="optionB" [(ngModel)]="question.options[1].optionText" required #optionB="ngModel">
+    </div>
+
+    <div class="form-group">
+      <label for="optionC">Option3</label>
+      <input type="text" class="form-control" name="optionC" autocomplete="off" id="optionC" [(ngModel)]="question.options[2].optionText" required #optionC="ngModel">
+    </div>
+
+    <div class="form-group">
+      <label for="optionD">Option4</label>
+      <input type="text" class="form-control" name="optionD" autocomplete="off" id="optionD" [(ngModel)]="question.options[3].optionText" required #optionD="ngModel">
+    </div>
+
+    <div class="form-group" style="margin-top: 10px;">
+      <label for="answer">Answer</label>
+      <input type="radio" value="1" name="answer" id="answer" [ngModel]="question.answer" required #answer="ngModel">1
+      <input type="radio" value="2" name="answer" id="answer" [ngModel]="question.answer" required #answer="ngModel">2
+      <input type="radio" value="3" name="answer" id="answer" [ngModel]="question.answer" required #answer="ngModel">3
+      <input type="radio" value="4" name="answer" id="answer" [ngModel]="question.answer" required #answer="ngModel">4
+    </div>
+
+    <span>
+    <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Update</button>
+    <h1>               </h1>
+            <button (click)="cancel()" class="btn btn-danger" style="background-color:Red;">Cancel</button>
+          </span>
+  </form>
+  <p class="social-text" style="color: red;font-weight: bold;font-size: 20px;" *ngIf="avail">{{msg}}</p>
+</div>
+
+<!-- <app-seequestion></app-seequestion> -->

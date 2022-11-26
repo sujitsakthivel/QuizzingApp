@@ -1,0 +1,36 @@
+<app-teachernav></app-teachernav>
+
+<div class="container mt-5">
+  <form #f="ngForm" (ngSubmit)="updateQuiz(f)">
+
+
+
+
+    <div class="form-group">
+      <label for="quizname">Quizname</label>
+      <input type="text" name="quizname" class="form-control" autocomplete="off" id="quizname" [ngModel]="quiz[0].quizname" required #quizname="ngModel">
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" class="form-control" autocomplete="off" name="description" id="description" [ngModel]="quiz[0].quizdescription" required
+        #description="ngModel">
+    </div>
+
+    <!-- <div class="form-group">
+      <label for="description">Time</label>
+      <input type="time" class="form-control" autocomplete="off" name="time" id="time" ngModel required
+        #time="ngModel">
+    </div> -->
+
+
+    <span>
+    <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Update</button>
+    <h1>               </h1>
+            <button (click)="cancel()" class="btn btn-danger" style="background-color:Red;">Cancel</button>
+          </span>
+  </form>
+  <p class="social-text" style="color: red;font-weight: bold;font-size: 20px;" *ngIf="avail">{{msg}}</p>
+</div>
