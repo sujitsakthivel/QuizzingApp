@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE taken [
+	<!ELEMENT taken (username,userid,useremail,creatoremail,quizid,score)>
+	<!ELEMENT username (#PCDATA)>
+    <!ELEMENT userid (#PCDATA)>
+    <!ELEMENT useremail (#PCDATA)>
+    <!ELEMENT creatoremail (#PCDATA)>
+    <!ELEMENT quizid (#PCDATA)>
+    <!ELEMENT score (#PCDATA)>
+]>
+
+<taken>
+    <username>S</username>
+    <userid>2</userid>
+    <useremail>s@gmail.com</useremail>
+    <creatoremail>a@gmail.com</creatoremail>
+    <quizid>1</quizid>
+    <score>5</score>
+</taken>
+
+<!-- <taken>
+    <username>Sujit</username>
+    <userid>1</userid>
+    <useremail>sujitsakthivel@gmail.com</useremail>
+    <creatoremail>s@gmail.com</creatoremail>
+    <quizid>1</quizid>
+    <score>0</score>
+</taken> -->

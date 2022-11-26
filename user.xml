@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE user [
+	<!ELEMENT user (name,phone,email,password)>
+	<!ELEMENT name (#PCDATA)>
+    <!ELEMENT phone (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT password (#PCDATA)>
+	<!ATTLIST user type (teacher|student) #REQUIRED>
+]>
+
+<user type="student">
+    <name>Sujit</name>
+    <phone>9843801261</phone>
+    <email>sujitsakthivel@gmail.com</email>
+    <password>123</password>
+</user>

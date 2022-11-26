@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE quiz [
+	<!ELEMENT quiz (title,des,items)>
+	<!ELEMENT title (#PCDATA)>
+    <!ELEMENT des (#PCDATA)>
+	<!ELEMENT items (item)+>	
+	<!ELEMENT item (question, option, option+)>
+	<!ELEMENT question (#PCDATA)>
+	<!ELEMENT option (#PCDATA)>
+	<!ATTLIST option correct (y) #IMPLIED>
+]>
+
+<quiz>
+  <title>Sample Quiz</title>
+  <des>Sample Quiz</des>
+    <items>
+      <item>
+        <question>Question1</question>
+        <option correct="y">1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </item>
+      <item>
+        <question>Question2</question>
+        <option correct="y">1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </item>		
+      <item>
+        <question>Question3</question>
+        <option>1</option>
+        <option correct="y">2</option>
+        <option>3</option>
+        <option>4</option>
+      </item>		
+      <item>
+        <question>Question4</question>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option correct="y">4</option>
+      </item>		
+    </items>
+</quiz>
